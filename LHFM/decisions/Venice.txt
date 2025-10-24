@@ -71,5 +71,9 @@ political_decisions = {
 			  827 = { add_core = VEN }
 			  badboy = 5
 		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }

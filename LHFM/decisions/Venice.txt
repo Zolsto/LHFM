@@ -16,15 +16,18 @@ political_decisions = {
 		}
 
 		allow = {
-			ideological_thought = 1
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
 		}
 		
 		effect = {
-			prestige = 5
 			government = democracy
 			political_reform = wealth_weighted_voting
 			political_reform = yes_meeting
-			political_reform = censored_press
+			political_reform = free_press
 		}
 		
 		ai_will_do = {
@@ -36,40 +39,60 @@ political_decisions = {
 # Venetian ambition #
 #####################
 
-	venetian_ambition = {
-		picture = "venetian_ambition"
+	claim_stato_tera = {
+		picture = "stato_tera"
 		potential = {
-			NOT = { has_country_flag = venetian_ambition }
+			NOT = { has_country_flag = claim_stato_tera }
 			tag = VEN
 		}
 		
 		allow = {
-			romanticism = 1
-			military_score = 20
+			military_score = 10
 			OR = 	{
-				ruling_party_ideology = reactionary
-				ruling_party_ideology = conservative
-				ruling_party_ideology = fascist
+				war_policy = jingoism
+				war_policy = pro_military
 			}
 		}
 		
 		effect = {
-			  set_country_flag = venetian_ambition
-			  prestige = 10
+			  set_country_flag = claim_stato_tera
+			  prestige = 5
 			  727 = { add_core = VEN }
 			  728 = { add_core = VEN }
-			  729 = { add_core = VEN }
-			  730 = { add_core = VEN }
-			  731 = { add_core = VEN }
-			  732 = { add_core = VEN }
-			  733 = { add_core = VEN }
+			  badboy = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_stato_mar = {
+		picture = "stato_mar"
+		potential = {
+			NOT = { has_country_flag = claim_stato_mar }
+			tag = VEN
+		}
+		
+		allow = {
+			military_score = 20
+			OR = 	{
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+		}
+		
+		effect = {
+			  set_country_flag = claim_stato_mar
+			  prestige = 10
 			  770 = { add_core = VEN }
-			  780 = { add_core = VEN }
 			  781 = { add_core = VEN }
+			  780 = { add_core = VEN }
+			  782 = { add_core = VEN }
 			  2582 = { add_core = VEN }
-			  826 = { add_core = VEN }
 			  827 = { add_core = VEN }
-			  badboy = 5
+			  826 = { add_core = VEN }
+			  badboy = 9
 		}
 
 		ai_will_do = {

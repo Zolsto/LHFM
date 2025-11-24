@@ -52,6 +52,8 @@ upper_house = {
 	communist = 0
 }
 
+schools = naval_tech_school
+
 1861.1.1 = {
 # Technologies
 
